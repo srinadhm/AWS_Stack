@@ -1,0 +1,56 @@
+DHCP :- Dynamic Host Configuration Protocol
+
+     * Automatically assigns IP addresses and other network
+	   configuration information like(subnetmask, broadcast address,
+	   dns server etc)to computers on a network
+	   
+	 *  DHCP server must have static IP address
+	 
+Steps:-
+
+1.Install package
+     yum install dhcp
+
+2.Check files,type yum -ql dhcp	 
+      dhclient.d   -for dhcp client
+	  dhcpd.conf   -for IPv4
+	  dhcpd6.conf  -for IPv6
+	  dhcpd.leases -dhcp server lease file
+	  
+3.Check dhcp.conf files
+   Its empty...no configuration is there but you have simple file
+   /user/share/doc/dhcp-4.1.1/dhcpd.conf.sample
+   copy sample file to /etc/dhcp/ & give its name to dhcpd.conf
+
+
+4.Now open /etc/dhcp/dhcpd.conf file
+   now uncomment "authoritative"
+
+5.Now enable log file for dhcp server monitoring   open new tab ctl+shift+tab
+  edit /etc/rsyslog.conf
+  add entry
+  local6.*                    /var/log/dhcp.log
+  then save 
+  
+6.Now in /etc/dhcp/dhcpd.configuration
+  edit in "log-facilitty local7" to "local6"  
+  then save
+  
+7.Now just edit like me ....just fallow me ...and save..
+  just disable router option
+
+8.dhcp server start
+  chkconfig dhcp on
+  chkconfig --list dhcpd  
+  
+9.Now restart dhcpd service.
+
+10.Now start rsyslog service
+
+11.Now see log file | /var/log/dhcp.log
+   file is empty ....now we go to client machine...
+   see our dhcp server working fine....:)
+
+12.Find who obtain ip address from our dhcp server
+   /var/lib/dhcpd/dhcpd.leases
+   

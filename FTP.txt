@@ -1,0 +1,48 @@
+FTP Server
+ steps:-
+ 
+ Install vsftpd rpm if its not present or not
+ rpm -qa | grep vsftpd
+ 
+1. install vsftp
+         yun install vsftpd -y
+		 
+2. Enable vsftpd service
+         chkconfig vsftpd on
+		 
+3. Start vsftp steps
+        service vsftpd start
+		
+4. Check ftp port
+       netstat -plunt | grep 21
+	   
+5. Test ftp server access
+        Ftp server is running and anonymous access is enabled by default
+		
+6. Disable anonymous access
+       Edit /etc/vsftpd/vsftpd.conf
+	        anonymous _enable=N0
+			
+7. Enable dual logging 
+        dual_log_enable=YES
+ It created /var/log/vsftpd.log file with uses vsftpd formate
+
+8. 	Enable server time for display of file and directories
+       use_localtime=YES
+	
+	
+* Edit the vsftpd.conf file in /etc/vsftpd
+
+      Uncomment this to allow local users to log in
+	      local_enable=YES
+		
+       to allow ftp uploads
+          write_enable=YES
+
+* Edit the ftpuser and user_list file in /etc/vsftpd
+  and remove the perticular user which you are using for ftp
+        vi /etc/vsftpd/ftpusers 
+		
+Edit the another file 
+      vi /etc/vsftp/user_list
+	  

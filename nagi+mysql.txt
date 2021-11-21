@@ -1,0 +1,91 @@
+    yum update 
+  yum install  php* -y
+	 yum install  httpd -y
+https://tecadmin.net/install-epel-and-remi-repository-on-centos-and-redhat/
+
+rpm -Uvh http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+
+yum install epel-release
+
+yum install nagios nagios-plugins-all nagios-plugins-nrpe nrpe -y 
+
+
+useradd nagiosadmin
+[root@ip-172-31-10-180 ~]# passwd nagiosadmin
+
+
+htpasswd -c /etc/nagios/passwd  nagiosadmin
+
+
+
+ setenforce 0     disable firewall 
+[root@ip-172-31-10-180 ~]# service nagios start  
+
+
+
+ZtTvd,>u4gwF
+
+sudo grep 'temporary password' /var/log/mysqld.log
+
+
+UPDATE mysql.user SET authentication_string = PASSWORD('nagarjuna')  WHERE User = 'root' AND Host = 'localhost';
+
+
+
+
+
+
+
+
+
+1. Stop mysql:
+systemctl stop mysqld
+
+2. Set the mySQL environment option 
+systemctl set-environment MYSQLD_OPTS="--skip-grant-tables"
+
+3. Start mysql usig the options you just set
+systemctl start mysqld
+
+4. Login as root
+mysql -u root
+
+5. Update the root user password with these mysql commands
+mysql> UPDATE mysql.user SET authentication_string = PASSWORD('MyNewPassword')  WHERE User = 'root' AND Host = 'localhost';
+mysql> FLUSH PRIVILEGES;
+mysql> quit
+
+6. Stop mysql
+systemctl stop mysqld
+
+7. Unset the mySQL envitroment option so it starts normally next time
+systemctl unset-environment MYSQLD_OPTS
+
+8. Start mysql normally:
+systemctl start mysqld
+
+Try to login using your new password:
+7. mysql -u root -p
+
+
+
+UlVamsi@123:aws consol password
+
+
+
+
+
+
+
+
+
+
+
+
+https://labs.consol.de/assets/downloads/nagios/check_mysql_health-2.2.2.tar.gz
+
+
+
+
+
+yum install perl-DBD-MySQL

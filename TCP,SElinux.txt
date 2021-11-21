@@ -1,0 +1,54 @@
+ TCP Wrappers:-
+ 
+ -->Security by TCP Wrappers
+        1. Additional layer of security
+		2. Limited to TCP packets
+		    * not UDP(video,audio)or ICMP(ping) 
+        3. To identify TCP Wrapper services
+            * lsof /lib/libwrap.so.0   or
+              /usr/lib/libwrap.so.0
+
+-->TCP Wrapper Security Configuration:-
+      # /etc/hosts.allow
+      # /etc/hosts.deny
+      # /etc/hosts.allow read first
+           * if service allowed in /etc/hosts.allow 
+           * /etc/hosts.deny ignored for that service
+  >AppArmor,iptables can add mor security
+ 
+-->TCP Wrapper File Format:-
+     >Daemon : Client : Command
+   Simplest example :
+         ALL : ALL
+    * in /etc/hosts.allow -all services allowed 
+    * in /etc/hosts.deny  -Allows services explicitly listed in /etc/hosts.allow
+	  
+
+	
+	SELINUX:-
+	
+  *Security-enhanced linux(SElinux) is an implementation of a
+    mandatory access control mechanism.
+	
+  Selinux Configuration file:-
+	   # vi /etc/sysyconfig/selinux
+	      In configuration file there are three polacys 
+             1.enforcing
+             2.permissive
+             3.disabled
+ 
+  Current status of selinux in your system
+      # getenforce
+  If you want to change Current status
+      # setenforce
+  If you want to check current status
+      # sestatus
+
+
+
+https://www.youtube.com/watch?v=ZELBbxXvMY0	  
+
+https://www.youtube.com/watch?v=gma-IRr5mnk
+			 
+	 
+  

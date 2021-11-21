@@ -1,0 +1,58 @@
+ curl https://s3.amazonaws.com//aws-cloudwatch/downloads/latest/awslogs-agent-setup.py -O
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 56093  100 56093    0     0  40433      0  0:00:01  0:00:01 --:--:-- 40471
+[root@ip-172-31-19-85 ~]# chmod +x awslogs-agent-setup.py
+[root@ip-172-31-19-85 ~]# ls
+anaconda-ks.cfg  awslogs-agent-setup.py  original-ks.cfg
+[root@ip-172-31-19-85 ~]# vi vamsi.demo
+[root@ip-172-31-19-85 ~]# vi vamsiconfig
+[root@ip-172-31-19-85 ~]#  ./awslogs-agent-setup.py -n -r ap-south-1 -c  myconfig
+
+Step 1 of 5: Installing pip ...^CTraceback (most recent call last):
+  File "./awslogs-agent-setup.py", line 1317, in <module>
+    main()
+  File "./awslogs-agent-setup.py", line 1313, in main
+    setup.setup_artifacts()
+  File "./awslogs-agent-setup.py", line 855, in setup_artifacts
+    self.install_system_dependencies()
+  File "./awslogs-agent-setup.py", line 725, in install_system_dependencies
+    self.install_pip()
+  File "./awslogs-agent-setup.py", line 742, in install_pip
+    self.install("python-setuptools")
+  File "./awslogs-agent-setup.py", line 501, in install
+    subprocess.call([installer, 'install', '-y', package], stderr=self.log_file, stdout=self.log_file)
+  File "/usr/lib64/python2.7/subprocess.py", line 524, in call
+    return Popen(*popenargs, **kwargs).wait()
+  File "/usr/lib64/python2.7/subprocess.py", line 1376, in wait
+    pid, sts = _eintr_retry_call(os.waitpid, self.pid, 0)
+  File "/usr/lib64/python2.7/subprocess.py", line 478, in _eintr_retry_call
+    return func(*args)
+KeyboardInterrupt
+[root@ip-172-31-19-85 ~]#  ./awslogs-agent-setup.py -n -r ap-south-1 -c  vamsiconfig
+
+Step 1 of 5: Installing pip ...DONE
+
+Step 2 of 5: Downloading the latest CloudWatch Logs agent bits ... DONE
+
+
+Step 5 of 5: Setting up agent as a daemon ...DONE
+
+
+------------------------------------------------------
+- Configuration file successfully saved at: /var/awslogs/etc/awslogs.conf
+- You can begin accessing new log events after a few moments at https://console.aws.amazon.com/cloudwatch/home?region=ap-south-1#logs:
+- You can use 'sudo service awslogs start|stop|status|restart' to control the daemon.
+- To see diagnostic information for the CloudWatch Logs Agent, see /var/log/awslogs.log
+- You can rerun interactive setup using 'sudo python ./awslogs-agent-setup.py --region ap-south-1 --only-generate-config'
+------------------------------------------------------
+[root@ip-172-31-19-85 ~]# service awslogs srat
+Usage: /etc/init.d/awslogs {start|stop|restart|status}
+[root@ip-172-31-19-85 ~]# service awslogs start
+Starting awslogs (via systemctl):                          [  OK  ]
+[root@ip-172-31-19-85 ~]# vi vamsi.demo
+
+
+http://awspolicygen.s3.amazonaws.com/policygen.html :-aws policy generator
+http://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/EC2NewInstanceCWL.html :-
+

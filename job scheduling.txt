@@ -1,0 +1,119 @@
+      Job Scheduling:-
+	  
+	  * at
+	  * crontab
+	 
+ # at 07:44
+at>ls
+at>cal
+at>date 
+ control+D enter
+   scheduling the job at 07:44
+# at 3:45
+at>whoami
+   control+D enter
+     scheduling the job at 03:45
+To view the scheduling jobs:-
+# at -l    
+# atq   
+ use this two above commands it will display number of 
+ job scheduling list
+
+# atq 
+  1    2017-12-07 07:44
+  2    2017-12-07 03:45
+  
+at.allow & at.deny:-
+ * If at.allow exists,only users in this file can schedule
+ * If at.allow do not exists,then only the users whoses name
+    is not listed in the at.deny can schedule the at jobs
+ * If neitherfile exists,only root can schedule atjobs
+ * If at.allow exists and is empty,not even root can schedule the at jobs
+ * If at.allow do not exists and at.deny is empty then all can
+   schedule the at jobs
+   
+   To Remove at jobs:-
+     # atrm jobid
+	 #at -d jobid
+	 
+   To view job content:-
+     # at -c jobid
+	 
+# vi /etc/at.allow 
+# vi etc/at.deny
+
+	 
+Crontab :-
+    *Utilizes the cron demon(crond) to execute repetitive tasks.
+   
+         crontab -l : Lists user cron table
+		 crontab -e : Create a new crontab
+		 crontab -r : Removes a cron table and all scheduling jobs
+		 
+Crontab field structure:-
+
+minute(0-59) hour(0-23) day of month(1-31) month of year(1-12) day of week(0-7)(1-6=mon to sat)
+
+Note: # vi /etc/cron.allow :Users must be listed in this file to be able to
+                            run cron jobs.	
+      # vi /etc/cron.deny  :User must not be listed in this file to be able to 
+                             run cron jobs.	  
+           This two commands control who can and cannot use cron 
+
+ To Edit other user use crontab use command as below:-
+  # crontab -eu username
+  
+  Examples:-
+   
+    view the crontab of user arjun
+	  # crontab -l -u arjun
+	Remove the crontab of user arjun
+      # crontab -r -u arjun 
+
+Field    Description       Allowed value
+
+MIN      Minute field      0 to 59
+HOUR     Hour field        0 to 23
+DOM      Day of Month      1 to 31
+MOY      Month of year     1 to 12
+DOW      Day of week       0 to 6
+CMD      Command           Any command to be executed
+
+30 08 10 06 * /home/nag/full-backup
+
+-30th minute
+-08 AM hour
+-10th day
+-06th month(june)
+-* every day of the week
+
+00 11,16 * * * /home/nag/bin/incremental-backup
+
+-00th minute(Top of the hour)
+-11,16-11AM and 4PM
+-* every day
+-* every month
+-* every day of the week
+
+	  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   https://www.youtube.com/watch?v=LrUYWbHkaFI

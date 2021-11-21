@@ -1,0 +1,57 @@
+        PACKAGE MANAGEMENT
+		   RPM and YUM
+		   
+>rpm -qa   : Query for All
+           : What are the packages are installed in your mechine
+		   
+>rpm -qa | wc -l  : How many packages are installed in current system 
+                    count.
+					
+ Currently running packages version:
+    >rpm -q vsftpd
+	    vsftpd-3.0.2-21.el7.x86_64
+		
+ Which Binary is associated with my 	this vsftpd rpm 
+    >which vsftpd  or  whereis vsftpd
+        /sbin/vsftpd
+		
+   RPM - Architecture:-
+ rpmname-version-release-OSversion-architecture.rpm
+ 
+ # rpm -ivh packagename
+               i:install
+			   v:verbose
+			   h:Display hash prompt
+			   
+ # rpm -qi packagename : query information
+ # rpm -qc packagename : query configuration files an rpm
+ # rpm -ql packagename : query list
+ # rpm -qf filename    : How to get a file in which rpm 
+  
+  Remove Packages:
+    # rpm -e packagename
+	
+NOTE:- Information of all the installed packages under "/var/lib/rpm"	
+       rpm cache Memory :- /var/lib/rpm
+	   
+	 YUM :-
+ # yum list : list the all the packages
+ # yum list | grep httpd
+ # yum search httpd
+ 
+    * More information of perticular package
+ # yum info packagename
+   yum info httpd
+   
+ Update the package using "yum update" 
+ but before check perticular package 
+ # yum check-update
+ # yum cache-update httpd
+ 
+ Remove packages:-   
+ # yum remove packagename
+ Remove yum cache:-
+ # yum clean all 
+     
+	" Main configuration file is :- /etc/yum.conf " 
+	" Repositry configuration file is :- /et/yum.repos.d/repofile.repo "S

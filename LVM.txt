@@ -1,0 +1,83 @@
+          LVM:-
+		  
+IMPORTANT URL:-https://www.youtube.com/watch?v=OhsR1bNd3kE
+
+SWAP:-It is used to act as virtual memmory.
+LVM:- (Logical volume manager)
+      It is used to manage hard disk in linux environment.
+	  
+	  1.It can Resize(extend and reduce)volume group(vg)
+       	and logical volume(lv)
+		
+	  2.It help in creating snapshot of logical volume
+	  
+	  3.It help in creating raid logical volume like
+	    raid-1,raid-3,raid-5 etc.
+		
+TO view the list of Harddisk:-
+ 
+# fdisk-l
+
+Create new partition:-
+
+# fdisk-c /dev/sda
+      (OR)
+# fdisk /dev/sda
+Command (m for help):p
+Command (m for help):n(add new partition)
+command action
+   e    extended
+   p    primary partition(1-4): 1
+e
+partition number (1-4) :1
+  
+create physical volume:-
+   pvcreate /dev/sda5 /dev/sda6 /dev/sda7
+       successfully /dev/sad5 /dev/sda6 /dev/sda7 created.
+	# pvs
+	
+Volume group Created:-
+
+vgcreate vg1 /dev/sda5 /dev/sda6 /dev/sda7
+  Volume group "vg1"  successfully created.
+  #vgs
+  
+Logical volume created:-
+
+lvcreate -l 100%FREE vg1 -n lv1
+  Logical volume "lv1" created.
+  # lvs
+  
+  
+  File System :-
+                 # mkfs.ext4 /dev/vg1/lv1\
+	
+# 	mkdir /data
+# vi /etc/fstab 
+   
+   /dev/vg1/lv1      /data     ext4    defaults  0  0
+   
+# mount -a
+# mount
+
+ # df -h /data
+#pvs
+
+#vgextend vg1 /dev/sda7
+    Volume group "vg1" successfully extended.
+#vgs
+
+#lvextend /dev/vg1/lv1 -l 100%VG
+    extending logical volume lv1 to 14.99 gib
+    logical volume lv1 successfully resized
+# df -h /data
+
+#cd /data
+#ls
+# touch file1 file2 file3
+# cd /
+#resize2fs /dev/vg1/lv1
+
+#df -h /data
+
+	   

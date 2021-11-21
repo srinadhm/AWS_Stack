@@ -1,0 +1,56 @@
+                  LINUX OS
+				  
+			Get the CPU information:
+			 " cat/proc/cpuinfo "
+			        or
+			    " lscpu "
+				
+          / -> Root or topmost directory
+-> /bin   :- All binary files stored under /bin	
+-> /boot  :- Files and commands required for boot(static and non-sharable)
+-> /dev   :- Device files informations(static and  non-sharable)
+-> /etc   :- ALL Basic configarution files,Disk related,user related stored under /etc
+-> /home  :- Home directories of all users except root(variable and sharable)
+-> /lib   :- Program libraries(static and non-sharable)
+-> /media :- Mount point for removable media(static and sharable)
+-> /mnt   :- Mount point for temporary file system by default /mnt is empty
+-> /opt   :- All third party softwares,applications stored under /opt(static and sharable)
+-> /proc  :- Kernel process and resource allocations(variable and non-sharable)
+-> /root  :- Root user directory
+-> /sbin  :- System administration tools
+             All system binary files stored under /sbin
+			 (only root executable commands stored under /sbin)
+-> /tmp   :- ALL Temporary files storage informations(variable and sharable)
+-> /usr   :- Pragrams and data for users(static and sharable)
+             Default directory type,if we are installed any new software 
+			 by default installed stored under /usr
+-> /var   :- Vriable data like log files,print spools(variable and sharable)
+-> /boot  :- It contains boot loader information and related files(ex:kernel)
+-> /last+found :- last+found will be found on all the partition system itself
+                  use this partition for auto checking purpose. 
+   which type of link ?
+    
+	  . Always a symbolic link
+	  . Never manually create a hard link
+	  . Each block device uses a sepsrste inode indexes
+	  
+ Type of files ?
+   1.- :Rgular file 
+   2.d :Directory files
+   
+ special files:
+ 
+   3.b :Block file
+   4.c :Character device file   
+   5.p :Named pipe file or just a pipe
+   6.l :Symbolic link file
+   7.s :Socket file   
+   
+       -: Filesystem Summary :-
+	   
+ 1.Filesystem is modeled as inverted tree
+ 2.Simple navigation with Cd,Pwd and ls	
+ 3.Root subdirectories and their historical relevance
+ 4.Concept of a single logical volume 
+ 5.Naming restrictions:NULL,'/', and 255 byte limit
+ 6.Links(hard & symbolic(soft)) and inodes 

@@ -1,0 +1,41 @@
+                Lsof:
+		
+-> LSOF:-"LiSt Open Files"  is used to find out which files are open by which process		
+		  List all open files with "lsof"command
+   *list User Specific opened files
+         # lsof -u username
+   *Find process running on Specific port
+         # lsof -i portnumber
+         # lsof -i tcp:22
+   *List Only IPv4 & IPv6 files
+         # lsof -i 4
+         # lsof -i 6
+   *List all network Connections
+         # lsof -i
+   *Find Out whos looking what files and commands
+         # lsof -i -u username
+   *arch by PID
+         # lsof -p 1
+   *Kill all Activity of Particular User
+         # kill -9 'lsof -t -u username'
+		 
+		 TCP & UDP :-
+		 
+Port Numbers:- port   protocol   use
+     		    21      FTP      File transfer
+				23      telnet   Remote login
+				25      SMTP     E-mail
+				69      TFTP     Trivial file transfer protocol
+				79      Finger   Lookup information about a user
+				80      HTTP     World wide web
+				110     POP-3    Remote e-mail access
+				119     NNTP     USENET news
+				
+		DIFFERENT BETWEEN udp&tcp:-		 
+ TCP                                  UDP
+ 
+*TCP connection is Oriented          *It is connection less
+*TCP is reliable                     *UDP is nonreliable
+*TCP acknowledgement will be         *No acknowledgement for UDP
+ sent/receive
+*It is slow communication            *It is faster communication 

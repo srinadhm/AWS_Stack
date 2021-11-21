@@ -1,0 +1,608 @@
+﻿1. What does nslookup do?
+
+2. How do you display the top most process utilizing CPU process?
+
+3. How to check all open ports on a Linux machine and block the unused ports?
+
+4. What is Linux? How is it different from UNIX?
+
+5. Explain the boot process of Unix System in details.
+
+6. How do you change the permissions? How to create a file that’s read-only property?
+
+7. Explain SUDO in detail. What are its disadvantages?
+
+8. What is the difference between UDP and TCP?
+
+9. Describe the boot order of a Linux machine.
+
+10. Design a 3-tier web application.
+
+11. Sketch how you would route network traffic from the internet into a few subnets.
+
+12. How do you know about virtualization? Is it good to use?
+
+13. What are different levels of RAID and what level will you use for a web server and database server?
+
+14. List some latest developments in open source technologies.
+
+15. Have you ever contributed to an open source project?
+
+16. Systems engineer or a systems administrator? Explain?
+
+17. List some of the common unethical practices followed by a system professional.
+
+18. What is the common size for a swap partition under a Linux system?
+
+19. What does a nameless directory represent in a Linux system?
+
+20. How to list all files, including hidden ones, in a directory?
+
+21. How to add a new system user without login permissions?
+
+22. Explain a hardlink. What happens when a hardlink is removed?
+
+23. What happens when a sysadmin executes this command: chmod 444 chmod
+
+24. How do you determine the private and public IP addresses of a Linux system?
+
+25. How do you send a mail attachment using bash?
+
+26. Tell me something about the Linux distros used on servers.
+
+27. Explain the process to re-install Grub in Linux in the shortest manner.
+
+28. What is an A record, an NS record, a PTR record, a CNAME record, an MX record?
+
+29. What is a zombie process? State its causes?
+
+30. When do we prefer a script over a compiled program?
+
+31. How to create a simple master/slave cluster?
+
+32. What happens when you delete the source to a symlink?
+
+33. How to restrict an IP so that it may not use the FTP Server?
+
+34. Explain the directory structure of Linux. What contents go in /usr/local?
+
+35. What is git? Explain its structure and working.
+
+36. How would you send an automated email to 100 people at 12:00 AM?
+
+37. Tell me about ZFS file system.
+
+38. How to change the default run level in a Linux system?
+
+39. How would you change the kernel parameters in Linux?
+
+40. State the differences between SSH and Telnet.
+
+41. How would you virtualize a physical Linux machine?
+
+42. Tell me about some quirky Linux commands.
+
+43. Explain how HTTPS works.
+
+44. Do you know about TOR browser? Explain its working.
+
+45. How to trigger a forced system check the next time you boot your machine?
+
+46. What backup techniques do you prefer?
+
+47. Tell me something about SWAP partition.
+
+48. Explain Ping of Death attack.
+
+49. How do you sniff the contents of an IP packet?
+
+50. Which OSI layer is responsible for making sure that the packet reaches its correct destination?
+
+51. What is an INODE?
+
+52.What is an MX record?
+
+53.Please describe the Linux boot-up sequence.
+
+54.How do you search for a pattern and then replace it in an entire file?
+
+55.How do you list and flush all IPtables?
+
+56.What is a zombie?
+
+57.How to look shared library dependencies?
+
+58.How trace system call and signal?
+
+59.How print the strings of printable characters in files?
+
+60.What is Automake and Autoconf?
+
+61.What shortcuts do you use on a regular basis?
+
+62.What's a chroot jail?
+
+63.Can you catch a SIGKILL?
+
+64.What does :(){ :|:& };: do on your system?
+
+65.What kind of keys are in ~/.ssh/authorized_keys and what it is this file used for?
+
+66.A running process gets EAGAIN: Resource temporarily unavailable on reading a socket. How can you close this bad socket/file descriptor without killing the process?
+
+67.A careless sysadmin executes the following command: chmod 444 /bin/chmod - what do you do to fix this?
+
+68.I've lost my root password, what can I do?
+
+69.Tell me about a creative way that you've used SSH?
+
+70.In a log file with contents as <TIME> : [MESSAGE] : [ERROR_NO] - Human readable text display summary/count of specific error numbers that occurred every hour or a specific hour.
+
+71.Explain the following command (date ; ps -ef | awk '{print $1}' | sort | uniq | wc -l ) >> Activity.log
+
+72.what is swap file
+
+73.what is kernel
+
+74.when we create a user what are the default files will be created for user
+
+75.how to change umask for non root user
+
+76.how to find files related to siva (particular user)
+
+77.explain raid partition
+
+78.how to find child processes of parent in static process
+
+79.explain top cmd parameters
+
+80.what is the use of lvm
+
+81.how to find size of files inside a directory
+
+82.how to delete a user with user home directory
+
+83.uid for root user
+
+84.how to identify kernel version
+
+85.how to identify the hard disk size
+
+86.how to identify swap size 
+
+87.difference between poweroff,shutdown,halt,init 0
+
+88.what is the use of dmesg command
+
+89.how many recommended linux partitions we need
+
+90.how to find each file size in directory
+
+91.how to identify cpu info
+
+92.how to identify the difference in file and modification of that file
+
+93.how to identify last modification file 
+
+94.what is umask value
+
+95.what is acl
+
+96.how to add user to a group
+
+97.how to remove history
+
+98.how to lock user and how to identify it 
+
+99.how to remove acl for directory
+
+100.what is repository
+
+101.how to install specific version of rpm 
+
+102.how to rollback the rpms
+
+103.how to clear the yum history
+
+104.which location yum history will be stored
+
+105.what is the use of yum clean
+
+106.how to identify the list of daemon process running in your machine*****
+
+107.what is the use of bashrc bashprofile
+
+108.what is login.defs file
+
+109.uid range for normal user
+
+110.list of grep commands
+
+111.what is labling
+
+112.how to reduce a partition in detail
+
+113.i have created a /home partition as a separate partition that /home become full, how to solve the issue
+
+114.how to identify when the grub was installed and updated
+
+115.how to identify the how many days still server is running
+
+116.how to download the packages by using yum
+
+117.how to install the downloaded packages using yum
+
+118.how to remove hardlink
+
+119.how to update the version of os
+
+120.how to identify the type of vendor processor your using 
+
+121.how to identify the grub version
+
+122.what is the use of acl 
+
+123.how to change the password for normal user
+
+124.how to create a user with specific expiry date 
+
+125.how to display the list of updates available packages
+
+126.how to identify how much load available in each core
+
+127.how to execute a script at every reboot
+
+128.how to identify which users logged in your machine 
+
+129.how to give the acl permissions
+
+130.what is the run level2
+
+131.diff between yum and rpm
+
+132.how to identify list of files in a rpm without installing
+
+133.how to identify the process ,which is consuming more memory by using static process
+
+134.how to create a repository
+
+135.date command examples
+
+136.how to identify list of executed at jobs
+
+137.how to get the alert when some one scheduled a at job
+
+138.how to kill all zombie process at a time
+
+139.how to restrict the group to access the cron and at 
+
+140.how to identify the recently created files in machine 
+
+141.how to extract a package before installation 
+
+142.i have /home/siva location copy files to /home/subbu location with same permissions
+
+143.how to identify file based on inode number 
+
+144.how to identify when the os was installed
+
+145.how to display latest history of yum 
+
+146.how to restart the server in 100 sec eventhough thousands of process running 
+
+147.how to identify what are file systems supported by machine
+
+148.how to set restart time to 10 sec of processes in top
+
+149.how to register system into rhn repository
+
+150.how to identify related scripts for package 
+
+151.how to find current load of my machine
+
+152.how to find how many times user logged in 
+
+153.i need to execute some scripts at run level 3
+
+154.how to identify available kernels
+
+155.who is resposible for memory management in linux 
+
+156.how to find file location in machine
+
+157.how to restrict a normaluser or root user even though he has all permissions 
+
+158.how to add a user with same uid ,what is the use of adding with same uid
+
+159.how to identify system or server model number
+
+160.how to identify when the command was executed by using history
+
+161.create a hardlink for thefile 
+    create a softlink across the partition
+	
+162.how to change user default directory home to another and how to change bash shell to another shell but dont usermod
+
+163.how to set environment path for normal user 
+
+164.create a swap file with detailed steps 
+
+165.how to clear buffer or cache 
+    how to identify cache 
+
+166.how to add a user without useradd 
+
+167.how to update the kernel parameters 
+
+168.please schedule a job create a directory at 11:00 am everyday 
+
+169.how to highlight a process in bold letter based on memory
+
+170.i have a directory siva give read,write permissions to vamsi,phani users 
+
+171.create a raid 5 
+
+172.what is LILO
+
+173.what is inode number
+
+174.diff between linux and windows 
+
+175.command to change group owner name 
+
+176.cmd to identify how many lines, characters,words in a file 
+
+177.how to find operating system name
+
+178.how to identify size of a file
+
+179.what is /etc/fstab
+
+180.how do u check whether it is mounted or not 
+
+181.how to compare two same files 
+
+182.list of available shells and where it will be stored 
+
+183.how to identify ram size
+
+184.diff between softlink and hardlink
+
+185.explain process states 
+
+186.how to create a partition and how to use that partition 
+
+187.how many primary part we can create 
+
+188.how to find last modified file
+
+189.diff between ext2 and ext3
+
+190.how to identify sticky bit 
+
+191.how to assign gid 
+
+192.how to add a user with specific gid 
+
+193.how to add a user without adding into group 
+
+194.how to see list of commands executed 
+    how to delete a history
+
+195.how to create a user without home directory 
+
+196.how to change umask value for root user 
+
+197.how to find siva out of 1000 users
+
+198.how to change file name siva to kesava
+
+199.diff between rm and rm-rf
+
+200.i want to copy one directory to another location with same permissions
+
+201.how to change ownership of a file 
+
+202.explain user fileds when we create a user
+
+203.how to increase lvm size 
+
+204.how to see existed volume groups
+
+205.what is the hexcode for swap partition
+
+206.how to change content siva to kesava in a file
+
+207.diff between touch and vi 
+
+208.diff between find and locate
+
+209.how to set acls for a user
+
+210.what is mdadm 
+
+211.diff between ext4 and xfs 
+
+212.process is running in my machine from which location it is running 
+
+213.name some linux operating systems 
+
+214.diff between uinx and linux
+
+215.explain linux directory structure 
+
+216.explain linux os structure 
+
+217.how to create alias name
+
+218.how to see users in particular group
+
+219.how to set the password in text format
+
+220.how to add user to a group
+
+221.how to remove user from a group
+
+222.how to change group name
+
+223.how to add multiple users to a group
+
+224.how to change username
+
+225.how to delete a user with home directory
+
+226.how to delete a user without home directory
+
+227.how to give sudo permissions 
+
+228.how to break a root password
+
+229.how to identify runlevel
+
+230.how can see which kernel version  a system is currently running
+
+231.how to check system ip address 
+
+232.how do u check for free disk space
+
+233.how do u manage services on a system
+
+234.how would u check size of directory contents on disk
+
+235.how would check for open ports on a linux machine
+
+236.how do u check cpu usage for a process 
+
+237.please describe the linux boot-up sequence
+
+238.what is bash
+
+239.what is core of linux operating system
+
+240.difference between bash and dos
+
+241.what is cli
+
+242.how do u access partitions under linux
+
+243.how do u share a program across different virtual desktops under linux
+
+244.what are kinds of permissions under linux 
+
+245.what are contents in /usr/local
+
+246.what is grep command
+
+247.how to insert comments in the command prompt
+
+248.how do you execute more than one command or program from a single command prompt entry
+
+249.what is shell and what are their names
+
+250.how do u terminate a ongoing process
+
+251.what is command grouping and how does it work
+
+252.what is gzip
+
+253.what is the command to uncompress gzip files
+
+254.what is inittab file do 
+
+255.what are monitoring tools in linux 
+
+256.every command in linux is 
+
+257.what is farewall
+
+258.what is tcp/ip
+
+259.difference between http and https
+
+260.what is proxy or proxy server
+
+261.what is loopback ip address
+
+262.what is dhcp
+
+263.what is ftp and port used
+
+264.what is ssh and port used
+
+265.what is maximum length of utp cable allowed
+
+266.what are the layers of osi and how many**************************
+
+267.what is the job of network layer********************
+
+268.can you tell different types of network cables
+
+269.what is subnet mask
+
+270.difference between workgroup and domain
+
+271.how would u determine connection path between localhost and server 
+
+272.explain ipconfig
+
+273.what is vpn
+
+274.what is network 
+
+275.what is protocol
+
+276.what is multiplexing
+
+277.define bandwidth
+
+278.what is meant by switching
+
+279.what are important topologies for networking
+
+280.what are duties of datalink layer
+
+281.what is virtual channel
+
+282.what is multicast routing 
+
+283.what is telnet 
+
+284.what is data communication
+
+285.what is point to point communication  
+
+286.what is simplex
+
+287.what is half duplex
+
+288.what is full duplex 
+
+289.what is topology
+
+    A.
+
+290.what is switching 
+
+291.difference between arp and rarp
+
+292.what is icmp
+
+293.what is mail gateway
+
+294.what is ip address
+
+295.what is subnetting
+
+296.what is gateway
+
+297.what are major types of networks
+
+298.what are the protocols in application layers
+
+299.difference between tftp and ftp application layer protocols
+
+300.what is mac address
+
+
+
+	

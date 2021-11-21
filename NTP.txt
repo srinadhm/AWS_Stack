@@ -1,0 +1,59 @@
+      NTP Server:-
+Steps:-
+1.Modify /etc/ntp.conf
+2.Start the NTP service 
+3.Enable NTP during the bootup
+4.Configure firewall
+5.Verify synchronization between servers.
+  
+  First we need to keep synchronize time of this servers
+  For this we will use NTP POOL cluster servers to synchronize 
+  time of local system
+  
+  Allow LAN System:
+        Now configure your NTP server to allow LAN system to keep synchronize 
+		their time from this server.TO do it add following entry in configuration file
+		
+	" restrict 192.168.1.0 mask 255.255.255.0 nomodify notrap "	
+
+
+# iptables -I INPUT -p udp --dport 123 -j ACCEPT
+# iptables -L
+# service iptables save
+
+# ntpq -p
+ 
+
+        @ DNS :Domain name system @
+     
+ Port no:53
+ package :Bind(birkely internet name domain)
+      
+ Steps:-
+    1.install Bind
+            yum install bind
+    2.Enable named service 
+            chkconfig named on
+    3.Edit /etc/named.conf
+    4.Start named(bind) service
+             service named start	
+	5.Edit /etc/named.conf
+    6.Copy /var/named/named.localhost
+              cp named.localhost linuxlab.local
+    7.Edit /var/named/linuxlab.local
+	8.Modify files ownership
+            chown root:named linuxlab.local 
+    9.service named reload
+   10.run DNS queries against this DNS server 
+             dig @localhost ns1.linuxlab.local
+             dig @localhost webserver.linuxlab.local
+             dig @localhost linuxlab.local mx
+             dig @localhost linuxlab.local NS
+
+  Our BIND DNS server is running as primary DNS server for "linuxlab.local" domain
+
+
+ imp URL:- https://www.youtube.com/watch?v=cYreetmZ_t0  
+   
+	
+	

@@ -1,0 +1,50 @@
+     Networking Commands
+	 
+Hostname    -Host/Dmain name IP address 
+Netstat     -Network Connections,routing tables
+Ping        -Test network Connections
+Ifconfig    -Getting network configuration
+nslookup    -Quey DNS lookup name
+telnet      -Communicate with other hostname
+traceroute  -Outing steps that packets take to get to network host
+      HOSTNAME :
+	         Hostname       -Display the machine hostname 
+			 Hostname -d    -Display the domain name the machine belongs to 
+			 Hostname -f    -Display the fully qualified host and domain name
+			 Hostname -i    -Display the IP address for the current machine
+	  PING :
+	     Ping can be used for two purposes
+		   1.Network connection can be established.
+		   2.Speed of the connection
+	If you 	DO PING WWW.GOOGLE.COM it will display its IP address 
+     use ctel+c to stop the test
+
+     NETSTAT : Most useful and very versatile for fining connection to 
+               and from the host.
+     #netstat -nap | grep port     -Display process id of application
+                                    which is using that port
+     #netstat -a or netstat -all   -Display all connections including TCP and UDP
+	 
+	 NETWORKING :
+             ifconfig -a         -View all network configuration & settings
+             ifconfig eth0       -View specific network settings
+             ifconfig eth0 UO	 -Enabling eth0 interface
+                 or
+             ifup eth0
+             ifconfig eth0 down  -Disabling eth0 interface
+                 or
+             ifdown eth0 
+
+      NSLOOKUP :
+            1.Discovers Hostname from IP address 
+            2.Discovers IP address from Hostname 
+        #nslookup google.com
+    
+      TRACEROUTE :
+                  A handy utility to view the number of hops and response
+				   time to get to a remote system or web site is traceroute.
+				   again you need an internet connection to make use of this tool.
+				    #traceroute google.com 
+					
+                  				  .
+	               

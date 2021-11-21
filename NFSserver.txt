@@ -1,0 +1,71 @@
+NFS server
+
+Steps:-
+
+Important Configuration files:-
+
+ * /etc/exports:-      It is main configuration files
+                       Which file systems are exports to remote hosts
+				       and specific options.
+					   
+ * /etc/fstab  :-      This file is used to control what file systems 
+                       including NFS directories are mounted when the system boots.
+					   
+ * /etc/sysconfig/nfs:-This file is used to control which ports the required RPC service run on.
+
+ * /etc/hosts.allow and * /etc/hosts.deny :- This files are called TCP Wrappers,
+                                             control the access to NFS server. It is used by
+											 NFS to decide whether or not to accept a connection  
+											 comming in from another IP address.
+Prerequisites for NFS server:-
+
+* YUM should be configured
+* SELINUX should be Disabled
+* Iptables should be disabled or port 2049 should ne enable
+* Connectivity should be enabled between NFS server and Client server 	
+
+Important Services:-
+
+* RPCbind      :The rpcbind server converts RPC program numbers into universel address
+* NFS-server   :It enables the client to access NFS shares
+* NFS-lock/rpc-statd :NFS file locking.implement file lock recovery when 
+                      an NFS server crashes and reboots.
+* NFS-idmap    :It translates user and group ids into names,and to translate    
+				user and group names into ids
+				
+Installation of NFS server:-
+
+1.yum install nfs-utills -y
+  once the packages are installed,enable and start NFS services
+  systemctl enable rpcbind
+  systemctl enable nfs-server    
+  
+  Creating  NFS Share Directory:-
+  
+      creat a directory and to share with  nfs client server
+	  you can also share your existing directory with nfs
+	  
+	#mkdir /arjun
+   #chmod 777 /arjun
+#vi /etc/exports : /arjun ip(rw,sync,no_root_squash)
+  after run the command
+  
+   exportfs -v:Display a list of shares files and exports otion on server
+   exportfs -a:Exporets all directories listed in /etc/exports
+   exportfs -u:Unexports one or more directories
+   exportfs -r:Reexports all directories after modifying /etc/exports
+
+*To mount the shares automatically on every reboot,
+ need to modify "/etc/fstab" file of your client system
+    # open the file with vi editor
+   #vi /etc/fstab
+
+Auto mount :-
+       
+            First we need to install in client
+    #yum install autofs* -y
+   then we are creating directory
+open the file "/etc/auto.master"   
+								 
+											 
+                                  

@@ -1,0 +1,124 @@
+      - System Utilities 
+	  - Process Management
+	    
+	 > Anything that is running in linux is a process
+         EXAMLLES:
+		      * Shell that is running and taking our commands
+			  * The commands that we type on terminal
+      > A Program which is being executed
+      >Processes are much like us 
+            * They are born.they die 
+            * They have parent and children
+	  > A Shell can also give birth to another shell process
+	          process attributes:
+			          PID   :Process ID
+					  PPID  :Parent Process ID
+			PID:Each process is uniquely identified
+                by an unique integer=PID
+				
+# uptime 
+# free :memory information
+# free -m :memory information of 
+           human reduble formate
+# df :Partition information
+# vmstat :Utilize and information of different processes
+# man vmstat :Discription of fields
+      vmstat:virtual memory statistic
+	  
+*PROCS
+     r:the number of processes waiting for run time
+	 b:the number of processes in uninterruptible sleep
+*MEMORY 
+     swpd:amount of virtual memory used
+     free:amount of idle memory
+     buff:amount of memory used as buffers.
+     cache:amount of memory used as cache.
+     inact/active:amount of inactive and active memory(-a option)
+*SWAP
+    si:amount of memory swapped in from disk
+    so:amount of memory swapped to disk
+*IO
+  bi:blocks received from a block device
+  bo:blocks sent to a block device
+  
+ PS Commands:- Is used for listing the current executing processes
+      ps -e
+	  ps -ef
+	  ps -ef
+	  ps -ely
+	  ps aux
+	  ps ax  
+	         NOTE: e - To display all the processes
+			       f - To display full formate listing
+				   
+1.To get info about a specific process
+    # ps -ef | grep <process name>	
+2.List the processes based on PIDs
+    # ps -p <process-id>
+3.List of process based on UIDs
+    # ps -u <process-id>	
+	
+To print a process tree(Which process is running):-
+      # ps -ejH
+I can see all the child processes:-	
+      # ps -eLf
+
+TOP:-
+   Top will display a full screen of information about the processes running
+   on the system,as well as some overall information about the system.
+   This includes Load average,
+                 number of processes,
+				 The CPU status,
+				 Free memory information,  
+   and details about processes including
+				 PID,
+				 User priority,
+				 CPU and Memory Usage information,
+				 running time,
+				 and program name.
+
+SHIFT+M - List the process according to memory usage
+SHIFT+P - List the process according to CPU usage
+
+* Z(press)- List running process is Colour.
+* r(press)- For renice a process
+
+You want to check specific User:
+    # top -u username
+	
+#ROW1:
+  Top-17:15:21              -Current system Time
+  up 52days,40 min          -System Up Time
+  2 Users                   -Current users
+  Load average:2.4,5.1,2.6  -CPU average load in 1/5/15 min
+#ROW2:
+   Task:173 total     -Total process in Active Mode
+   2 running          -Currently running process
+   121 sleeping       -Total process in sleeping Mode
+   1 stopped          -Total process stopped   
+   0 zombie           -Total process in zombie state
+#ROW3:
+   CPU(s):1.0%us  -%CPU used by use process
+   0.1%sy         -%CPU used by system process
+   0.1%ni         -%CPU used by nice value setting
+   64.1%id        -%CPU in idle state
+   34.6%wa        -%CPU Waiting for I/On
+   0.0%hi         -%CPU used by hardware interrupts.
+   0.0%si         -%CPU used by software interrupts.
+   0.1%ni         -%CPU used steal time(virtual cpu to actual cpu)
+#ROW4:
+   Mem:1924656k total  -Total system Memory
+       590628k used    -Memory used by system
+       444028k free    -Free Memory
+       67745k buffer   -Buffer Memory
+#ROW5:
+  	Swap:2067859k total  -Total Swap Memory
+         0k used         -Swap Memory by system
+         2084445k free   -Free Swap Memory
+         377016k cache   -Cache Memory		 
+Kill :-
+    On occasion,programs misbehave and it needs to be killed.
+ 	    # kill pid
+		# pkill <process name> - for killing the process by name
+				 
+				 

@@ -1,0 +1,78 @@
+     MONGODB :-
+	 
+*	No sql relational oriented database
+
+https://www.youtube.com/watch?v=27SWNsjNBy4
+
+https://docs.mongodb.com/v2.8/tutorial/install-mongodb-on-red-hat/
+
+https://tecadmin.net/install-mongodb-on-centos-rhel-and-fedora/
+
+Steps:-
+
+*All repos under /etc/yum.repos.d
+                                                                                                   
+                                            
+
+[mongodb-org-3.0]			
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.0/x86_64/
+gpgcheck=0
+enabled=1
+
+yum install -y mongodb-org
+
+service mongod status
+   mongod is stopped
+   
+service mongodb start
+starting mongod
+service mongod status
+mongod (pid 3006) is running...
+
+mongo
+
+
+RDBMS                                  MongoDB
+
+database                             dtabase
+table                                collection
+tuple/row                            document
+column                               field
+table join                           embedded documents
+primary key                          primary key (default key_id provided
+                                                   by mongodb itself)
+
+WHY Use MongoDB ?
+
+1.DOCUMENT ORIENTED STORAGE-data is stored in the 
+  from of JSON style documents.
+2.Index on any attribute
+3.Replication and high availability
+4.Auto-sharding
+5.Rich queries
+6.Fast in-place updates
+7.Professional support by MongoDB
+
+WHERE To Use MongoDB ?
+
+1.Big Data
+2.Content Management and Delivery
+3.Mobile and social infrastructure
+4.User data management
+5.Data Hub
+
+  
+  >db
+  >use nag;
+      switched to db nag
+ >db.nag.insert({"id":10});
+ > show collections;
+ >db.createcollection("arjun")
+  {"ok":1}
+ >show collections;
+    arjun
+>db.arjun.insert({"id":10})
+   writeresult
+>show dbs;
+   

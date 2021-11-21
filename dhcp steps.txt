@@ -1,0 +1,22 @@
+DHCP Steps:-
+
+1.update your system
+   yum update
+   
+2.View your current IP configuration
+3.Install DHCPD
+    yum install dhcp
+4.rpm -qc dhcp
+5.cat /etc/dhcp/dhcpd.conf
+6.cp /usr/share/doc/dhcp-4.1.1/dhcpd.conf.sample /etc/dhcp/dhcpd.conf
+7.cd /etc/dhcp/dhcpd.conf
+8.cp dhcpd.conf.sample dhcp.conf
+
+9.edit /etc/dhcp/dhcpd.conf file and comment out unnecessary things
+  NOTE:Change DHCP to log using different facility
+
+10.service rsyslog restart
+11.service dhcpd restart
+
+Our DHCPD is running
+ 

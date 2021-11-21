@@ -1,0 +1,60 @@
+  NET STAT Commands:
+   
+   1.List all ports 
+      #netstat -a | more
+	
+   2.List all tcp ports
+      #netstat -at | more
+   
+   3.List all udp ports
+      #netstat -au | more
+ 
+   4.List Sockets which are in Listening stat
+      #netstat -l | more 
+      #netstat -lt | more    -Listening TCP ports
+      #netstat -lu | more  	 -Listening UDP ports
+
+   5.Show the statistics for each protocol
+      #netstat -s
+   
+   6.Show statistics for TCP(or)UDP ports
+      #netstat -st 
+      #netstat -su
+  
+   7.Display PID and program names in netstat output using
+      #netstat -p
+      #netstat -pt
+      #netstat -pu
+
+   8.Don't resolve host,port,and username in netstat output
+      #netstat -an
+   9.If you don't want only any one of those three items(ports,hosts,users)to be resolved
+      #netstat -a --numeric-ports
+      #netstat -a --numeric-hosts
+      #netstat -a --numeric-users
+
+   10.Print netstat information continuously
+      #netstat -c
+
+   11.Find the non supportive address families in your system
+      #netstat --verbose
+	  
+   12.Display the kernel routing information
+      #netstat -r 
+	  
+	    -->NOTE:Use "netstat -rn" to display routes in numeric
+		        format without resolving for host-names.
+
+   13.Find out on which port a program is running
+      #netstat -ap | grep ssh
+   14.Find out which process is using a particular port
+      #netstat -an | grep :80
+
+   15.Show the list of network interfaces
+       #netstat -i
+   16.Display extended information on the interfaces(similar to ifconfig)
+       #netstat -ie
+
+   17.Display IPv4 and IPv6 information(multicast) 
+       #netstat -g  
+	   
